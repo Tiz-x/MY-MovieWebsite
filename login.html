@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>movie login page</title>
+  <link rel="stylesheet" href="login.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="marquee-container">
+    <div class="marquee-content">
+      🎬 New Movies Added Weekly! 🎬 Join Now For Exclusive Content! 🎬 Subscribe To Our Newsletter For Movie Updates! 🎬 Thank You!👍
+    </div>
+  </div>
+
+  <div class="background"></div>
+  
+  <div class="login-container">
+    <div class="login-header">
+      <h2>SIGN INTO <span>TIZMOVIE</span></h2>
+    </div>
+    
+    <div class="login-form">
+      <form id="signin-form">
+        <div class="form-group">
+          <input type="email" class="form-control" id="email" placeholder="Email" required>
+        </div>
+        
+        <div class="form-group">
+          <input type="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+        
+        
+        <button type="submit" class="signin-btn">SIGN IN</button>
+      </form>
+    
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const signinForm = document.getElementById('signin-form');
+    
+    if (signinForm) {
+      signinForm.addEventListener('submit', function(e) {
+        e.preventDefault(); 
+
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        
+        const email = emailInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        if (email === '' || password === '') {
+          alert('Please enter both email and password.');
+        } else {
+
+          emailInput.value = '';
+          passwordInput.value = '';
+          window.location.href = 'movie.html'; 
+        }
+      });
+    }
+  });
+
+  </script>
+</body>
+</html>
